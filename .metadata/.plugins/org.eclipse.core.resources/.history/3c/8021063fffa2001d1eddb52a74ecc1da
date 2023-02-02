@@ -1,0 +1,13 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class Produto extends PageObject{
+
+	public Produto(WebDriver driver) {
+		super(driver);
+	}
+	
+	
+
+}

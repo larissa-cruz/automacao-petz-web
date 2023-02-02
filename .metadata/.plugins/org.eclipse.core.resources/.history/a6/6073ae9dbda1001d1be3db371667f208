@@ -1,0 +1,19 @@
+//1 - Nome do pacote
+package PetzWeb;
+
+//2 - Bibliotecas Importadas
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+
+//3 - Classe
+public class Simples {
+	//3.1 - Atributos
+	String url; //endereço do site
+	WebDriver driver; //Esse daqui é o Selenium, o objeto do Selenium WebDriver
+	
+	//3.2 - Métodos ou Funções
+	@Before //Antes do teste
+	public void iniciar() {
+		url = "https://www.petz.com.br";
+	}
+}

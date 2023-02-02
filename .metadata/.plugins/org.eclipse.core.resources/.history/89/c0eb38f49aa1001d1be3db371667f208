@@ -1,0 +1,15 @@
+//1 - Nome do pacote
+package PetzWeb;
+
+//2 - Bibliotecas Importadas
+
+
+//3 - Classe
+public class Simples {
+	//3.1 - Atributos
+	String url; //endereço do site
+	WebDriver driver;
+	
+	//3.2 - Métodos ou Funções
+
+}

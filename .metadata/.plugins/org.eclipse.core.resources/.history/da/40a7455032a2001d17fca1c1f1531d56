@@ -1,0 +1,14 @@
+package pages;
+
+public class Home {
+	//Atributos
+	//Caixa de Pesquisa
+	@FindBy(id = "search")
+	private WebElement
+	
+	//Construtor
+	
+	
+	//Métodos ou Funções
+
+}

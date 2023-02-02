@@ -1,0 +1,16 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Lista {
+
+	@FindBy(xpath = "//h3[@itemprop='name'][contains(.,'Coleira Zee.Dog Ella para Cães')]")
+	private WebElement produtoDesejado;
+
+	public Lista(WebDriver driver) {
+		super(driver);
+	}
+	
+	
+}

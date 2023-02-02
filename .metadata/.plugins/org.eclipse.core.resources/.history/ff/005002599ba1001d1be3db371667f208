@@ -1,0 +1,15 @@
+//1 - Nome do pacote
+package PetzWeb;
+
+//2 - Bibliotecas Importadas
+import org.openqa.selenium.WebDriver;
+
+//3 - Classe
+public class Simples {
+	//3.1 - Atributos
+	String url; //endereço do site
+	WebDriver driver; //Esse daqui é o Selenium
+	
+	//3.2 - Métodos ou Funções
+
+}

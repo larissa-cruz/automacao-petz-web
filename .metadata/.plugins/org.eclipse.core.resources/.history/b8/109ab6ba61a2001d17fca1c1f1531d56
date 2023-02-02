@@ -1,0 +1,70 @@
+package PetzWeb;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+import pages.Home;
+import pages.Lista;
+
+public class ComprarProduto {
+	
+	String url; 
+	WebDriver driver; 
+	
+	Home home; //objeto home herdando a classe Home
+	Lista lista; //objeto lista herdando a classe Lista
+	
+	@Before
+	public void iniciar() {
+		url = "https://www.petz.com.br";
+		
+		System.setProperty("webdriver.chrome.driver", "chromedriver/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS); 
+		
+		home = new Home(driver); //instanciar (ligar) a página(classe) Home.
+		lista = new Lista(driver); //instanciar (ligar) a página(classe) Lista.
+	}
+	
+	@After 
+	public void finalizar() {
+		driver.quit();
+	}
+
+	@Dado("que acesso o site Petz")
+	public void que_acesso_o_site_petz() {
+	    driver.get(url); //Abre o site da Petz
+	}
+
+	@Quando("busco por {string} e pressiono enter")
+	public void busco_por_e_pressiono_enter(String produto) {
+	    home.buscarProdutoComEnter(produto);
+	}
+
+	@Entao("exibe uma lista de produtos relacionados com {string}")
+	public void exibe_uma_lista_de_produtos_relacionados_com(String produto) {
+		lista.clicarProduto(produto);
+	    System.out.println("Passo 3");
+	}
+
+	@Quando("escolho {string}")
+	public void escolho(String string) {
+	    System.out.println("Passo 4");
+	}
+
+	@Entao("exibe para o {string} o preço de {string}")
+	public void exibe_para_o_o_preço_de(String string, String string2) {
+	    System.out.println("Passo 5");
+	}
+
+
+	
+}

@@ -1,0 +1,8 @@
+package pages;
+
+
+public class Lista {
+
+	@FindBy(xPath = "//h3[@itemprop='name'][contains(.,'Coleira Zee.Dog Ella para Cães')]")
+	private WebElement produtoDesejado;
+}

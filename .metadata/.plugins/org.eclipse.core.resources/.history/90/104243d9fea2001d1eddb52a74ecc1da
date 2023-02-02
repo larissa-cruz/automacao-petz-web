@@ -1,0 +1,9 @@
+package pages;
+
+public class Produto {
+
+	public Produto() {
+		super();
+	}
+
+}

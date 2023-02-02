@@ -1,0 +1,13 @@
+package pages;
+
+public class Home {
+	//Atributos
+	//Caixa de Pesquisa
+	@FindBy
+	
+	//Construtor
+	
+	
+	//Métodos ou Funções
+
+}
