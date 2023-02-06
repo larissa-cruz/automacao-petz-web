@@ -51,6 +51,8 @@ public class ComprarProduto {
 
 	@Quando("busco por {string} e pressiono enter")
 	public void busco_por_e_pressiono_enter(String produto) {
+		home.esperarAceitarCookies();
+		home.aceitarCookies();
 	    home.buscarProdutoComEnter(produto);
 	}
 

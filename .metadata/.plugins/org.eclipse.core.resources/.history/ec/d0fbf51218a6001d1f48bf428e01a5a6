@@ -1,0 +1,38 @@
+package pages;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Home extends PageObject {
+	//Atributos
+	//Caixa de Pesquisa
+	@FindBy(id = "search")
+	private WebElement busca;
+	//Botão aceitar cookies
+	@FindBy(xpath = "//button[contains(.'Prosseguir com todos')]")
+	private WebElement prosseguir;
+	
+	//Construtor
+
+	public Home(WebDriver driver) {
+		super(driver);
+		
+	}
+	
+	//Métodos ou Funções
+	
+	public void aceitarCookies() {
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+		prosseguir.click();
+	}
+	
+	public void buscarProdutoComEnter(String produto) {
+		busca.clear(); //limpa a caixa de pesquisa
+		busca.sendKeys(produto + Keys.ENTER);
+	}
+
+}
